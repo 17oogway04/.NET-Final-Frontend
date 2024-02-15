@@ -10,6 +10,7 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
 import { NewPostComponent } from './components/new-post/new-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { ViewPostComponent } from './components/view-post/view-post.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ViewPostComponent } from './components/view-post/view-post.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
