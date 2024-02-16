@@ -1,1 +1,17 @@
-<p>sign-up works!</p>
+<form (ngSubmit)="signUp()">
+    <h1>REGISTER</h1>
+    <span>First Name  </span>
+    <input placeholder="Enter First Name" type="text" name="firstName" [(ngModel)]="newUser.firstName"><br><br>
+    <span>Last Name  </span>
+    <input placeholder="Enter Last Name" type="text" name="lastName" [(ngModel)]="newUser.lastName"><br><br>
+    <span>Username  </span>
+    <input placeholder="Enter Username" type="text" name="userName" [(ngModel)]="newUser.userName"><br><br>
+    <span>Password  </span>
+    <input placeholder="Enter Password" type="text" name="password" [(ngModel)]="newUser.password"><br><br>
+    <span>Favorite Animal  </span>
+    <input placeholder="Enter Favorite Animal" type="text" name="favoriteAnimal" [(ngModel)]="newUser.favoriteAnimal"><br><br>
+    
+    <button>
+      Sign Up
+    </button>
+</form>

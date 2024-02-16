@@ -1,1 +1,14 @@
-<p>new-post works!</p>
+<form (ngSubmit)="addArk()">
+    <h1>Create a post</h1>
+    <span>Post title</span>
+    <input placeholder="Enter post title" type="text" name="name" [(ngModel)]="newArk.name"><br><br>
+    <span>Content</span>
+    <input placeholder="Enter content" type="text" name="content" [(ngModel)]="newArk.content"><br><br>
+    <span>Location</span>
+    <input placeholder="Enter location" type="text" name="location" [(ngModel)]="newArk.location"><br><br>
+    <span>Image</span>
+    <input placeholder="Enter image" type="text" name="image" [(ngModel)]="newArk.imgUrl"><br><br>
+    <button>
+        Create a Post
+    </button>
+</form>

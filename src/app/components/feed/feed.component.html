@@ -1,1 +1,14 @@
-<p>feed works!</p>
+
+<h1>Welcome to the feed</h1>
+<a [routerLink]="['new']">Create New Post</a>
+<div *ngIf="feedList">
+    <div *ngFor="let feed of feedList">
+        <h2>{{feed.name}}</h2>
+        
+        <p>{{feed.content}}</p>
+        <p>{{feed.location}}<p>
+        <a [routerLink]='["/Ark", feed.arkId]'>Edit Post</a>
+        <a [routerLink]='["/profile", feed.arkId]'>Profile</a>
+        <button (click)="onDelete(feed.arkId!)">Delete Post</button>
+    </div>
+</div>

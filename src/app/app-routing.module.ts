@@ -5,11 +5,12 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { NewPostComponent } from './components/new-post/new-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "/signin",
+    redirectTo: "/Ark",
     pathMatch: "full"
   },
   {
@@ -21,16 +22,20 @@ const routes: Routes = [
     component: SignUpComponent
   },
   {
-    path: "ark",
+    path: "Ark",
     component: FeedComponent
   },
   {
-    path: "ark/new",
+    path: "Ark/new",
     component: NewPostComponent
   },
   {
-    path: "ark/:id",
+    path: "Ark/:id",
     component: EditPostComponent
+  },
+  {
+    path: "profile/:id",
+    component: ProfilePageComponent
   }
 ];
 
