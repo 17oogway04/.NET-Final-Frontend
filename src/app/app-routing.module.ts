@@ -7,6 +7,7 @@ import { NewPostComponent } from './components/new-post/new-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: "home",
     component: HomePageComponent
+  },
+  {
+    path: "logout",
+    component: LogoutComponent
   }
 ];
 

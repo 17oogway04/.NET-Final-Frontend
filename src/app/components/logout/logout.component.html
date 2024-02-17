@@ -1,0 +1,14 @@
+
+    <h1>Log out</h1>
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput type="text" name="username" [(ngModel)]="username" >
+          <mat-icon matSuffix>mood_bad</mat-icon>
+        </mat-form-field>
+    </p>
+
+    <button mat-stroked-button color="primary" (click)="userService.logout()">
+        Log out
+    </button>
+

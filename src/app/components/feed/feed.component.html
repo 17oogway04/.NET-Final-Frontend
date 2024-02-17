@@ -16,8 +16,8 @@
                 </p>
             </mat-card-content>
             <mat-card-actions>
-                <a [routerLink]='["/Ark", feed.arkId]' style="margin: 4px;">Edit Post</a>
-                <button (click)="onDelete(feed.arkId!)" style="margin: 4px;">Delete Post</button>
+                <button mat-stroked-button color="primary" [routerLink]='["/Ark", feed.arkId]' style="margin: 4px;">Edit Post</button>
+                <button mat-stroked-button color="warn" (click)="onDelete(feed.arkId!)" style="margin: 4px;">Delete Post</button>
 
             </mat-card-actions>
         </mat-card>

@@ -22,6 +22,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import { LogoutComponent } from './components/logout/logout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import {MatListModule} from '@angular/material/list';
     NewPostComponent,
     EditPostComponent,
     ViewPostComponent,
-    HomePageComponent
+    HomePageComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
