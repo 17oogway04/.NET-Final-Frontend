@@ -1,14 +1,26 @@
 <form (ngSubmit)="addArk()">
     <h1>Create a post</h1>
-    <span>Post title</span>
-    <input placeholder="Enter post title" type="text" name="name" [(ngModel)]="newArk.name"><br><br>
-    <span>Content</span>
-    <input placeholder="Enter content" type="text" name="content" [(ngModel)]="newArk.content"><br><br>
-    <span>Location</span>
-    <input placeholder="Enter location" type="text" name="location" [(ngModel)]="newArk.location"><br><br>
-    <span>Image</span>
-    <input placeholder="Enter image" type="text" name="image" [(ngModel)]="newArk.imgUrl"><br><br>
-    <button>
-        Create a Post
-    </button>
+    <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width">
+          <mat-label>Title</mat-label>
+          <input matInput placeholder="Enter post title" type="text" name="name" [(ngModel)]="newArk.name">
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+          <mat-label>Location</mat-label>
+          <input matInput placeholder="Enter location" type="text" name="location" [(ngModel)]="newArk.location">
+        </mat-form-field></td>
+      </tr></table>
+    
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>Content</mat-label>
+          <textarea matInput placeholder="Enter content" type="text" name="content" [(ngModel)]="newArk.content"></textarea>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Image</mat-label>
+          <textarea matInput placeholder="Enter image" type="text" name="image" [(ngModel)]="newArk.imgUrl"></textarea>
+        </mat-form-field>
+      </p>
+      <button mat-raised-button color="primary">Create</button>
+    
 </form>

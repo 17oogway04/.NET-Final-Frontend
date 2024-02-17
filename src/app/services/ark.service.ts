@@ -21,9 +21,7 @@ export class ArkService {
   getArk(arkId: string) {
     return this.http.get<Arks>(this.baseUrl + "/" + arkId);
   }
-  getUser(userId: string) {
-    return this.http.get<User>(this.baseUrl + "/" + userId);
-  }
+
   createArk(newArk: Arks) {
     let reqHeaders = {
       Authorization: `Bearer ${localStorage.getItem(this.tokenKey)}`

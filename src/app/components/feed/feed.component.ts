@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Arks } from 'src/app/models/arks';
+import { User } from 'src/app/models/user';
 import { ArkService } from 'src/app/services/ark.service';
+
 
 @Component({
   selector: 'app-feed',
@@ -8,8 +10,9 @@ import { ArkService } from 'src/app/services/ark.service';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit{
-
+  
   feedList: Arks[] = [];
+  user: User = new User();
 
   constructor(private arkService: ArkService){}
 

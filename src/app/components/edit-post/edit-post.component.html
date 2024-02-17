@@ -1,18 +1,24 @@
 <h1>Edit Post</h1>
 <form (ngSubmit)="onSubmit()">
-    <label>Post title</label>
-    <input type="text" name="name" [(ngModel)]="currentArk.name">
-
-    <label>Post Content</label>
-    <input type="text" name="content" [(ngModel)]="currentArk.content">
-
-    <label>Post Location</label>
-    <input type="text" name="location" [(ngModel)]="currentArk.location">
-
-    <label>Post Image</label>
-    <input type="text" name="image" [(ngModel)]="currentArk.imgUrl">
-
-    <button>
-        Edit post
-    </button>
-</form>
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width">
+          <mat-label>{{currentArk.name}}</mat-label>
+          <input matInput type="text" name="name" [(ngModel)]="currentArk.name">
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+          <mat-label>{{currentArk.location}}</mat-label>
+          <input matInput type="text" name="location" [(ngModel)]="currentArk.location">
+        </mat-form-field></td>
+      </tr></table>
+    
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>{{currentArk.content}}</mat-label>
+          <textarea matInput type="text" name="content" [(ngModel)]="currentArk.content"></textarea>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>{{currentArk.imgUrl}}</mat-label>
+          <textarea matInput type="text" name="image" [(ngModel)]="currentArk.imgUrl"></textarea>
+        </mat-form-field>
+      </p>
+      <button mat-raised-button color="accent">Edit</button></form>

@@ -1,13 +1,21 @@
 <form (ngSubmit)="signin()">
     <h1>Login</h1>
-    <span>Username</span>
-    <input placeholder="Enter username" type="text" name="username" [(ngModel)]="username">
-    <br><br>
-    <span>Password</span>
-    <input placeholder="Enter password" type="password" name="password" [(ngModel)]="password">
-    <br><br>
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput type="text" name="username" [(ngModel)]="username" >
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" name="password" [(ngModel)]="password">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </p>
 
-    <button>
+    <button mat-stroked-button color="primary">
         Sign in
     </button>
 </form>

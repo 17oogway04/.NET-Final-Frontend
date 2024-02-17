@@ -1,17 +1,33 @@
-<form (ngSubmit)="signUp()">
-    <h1>REGISTER</h1>
-    <span>First Name  </span>
-    <input placeholder="Enter First Name" type="text" name="firstName" [(ngModel)]="newUser.firstName"><br><br>
-    <span>Last Name  </span>
-    <input placeholder="Enter Last Name" type="text" name="lastName" [(ngModel)]="newUser.lastName"><br><br>
-    <span>Username  </span>
-    <input placeholder="Enter Username" type="text" name="userName" [(ngModel)]="newUser.userName"><br><br>
-    <span>Password  </span>
-    <input placeholder="Enter Password" type="text" name="password" [(ngModel)]="newUser.password"><br><br>
-    <span>Favorite Animal  </span>
-    <input placeholder="Enter Favorite Animal" type="text" name="favoriteAnimal" [(ngModel)]="newUser.favoriteAnimal"><br><br>
-    
-    <button>
-      Sign Up
+<h1>REGISTER</h1>
+<form class="example-form" (ngSubmit)="signUp()">
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>First name</mat-label>
+                    <input matInput type="text" name="firstName" [(ngModel)]="newUser.firstName">
+                </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Last name</mat-label>
+                    <input matInput type="text" name="lastName" [(ngModel)]="newUser.lastName">
+                </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Username</mat-label>
+                    <input matInput type="text" name="userName" [(ngModel)]="newUser.userName">
+                </mat-form-field></td>
+        </tr>
+        <tr>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="text" name="password" [(ngModel)]="newUser.password">
+                </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Favorite Animal</mat-label>
+                    <input matInput type="text" name="favoriteAnimal" [(ngModel)]="newUser.favoriteAnimal">
+                </mat-form-field></td>
+        </tr>
+
+    </table>
+    <button mat-stroked-button color="primary">
+        Sign Up
     </button>
 </form>

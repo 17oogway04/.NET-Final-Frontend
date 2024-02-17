@@ -6,11 +6,12 @@ import { FeedComponent } from './components/feed/feed.component';
 import { NewPostComponent } from './components/new-post/new-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "/Ark",
+    redirectTo: "/home",
     pathMatch: "full"
   },
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: "profile/:id",
     component: ProfilePageComponent
+  },
+  {
+    path: "home",
+    component: HomePageComponent
   }
 ];
 

@@ -19,12 +19,9 @@ export class ProfilePageComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    const routeId = this.actRoute.snapshot.paramMap.get("") ?? "";
-    this.id = routeId;
-    this.arkService.getUser(this.id).subscribe(foundUser => {
-      this.currentUser = foundUser;
-    });
+    
   }
+ 
 
 
 

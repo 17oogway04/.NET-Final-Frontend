@@ -26,7 +26,7 @@ export class EditPostComponent implements OnInit {
 
   onSubmit(){
     this.arkService.updateArk(this.id, this.currentArk).subscribe(() => {
-      window.alert("Updated post successfully");
+      window.alert("Updated post successfully")
       this.router.navigate(['Ark']);
     }, error => {
       console.log('Error: ', error)

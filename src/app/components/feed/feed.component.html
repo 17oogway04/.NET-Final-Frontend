@@ -1,14 +1,26 @@
-
-<h1>Welcome to the feed</h1>
-<a [routerLink]="['new']">Create New Post</a>
+<div>
+    <h1>Welcome to the feed</h1>
+    <button style="margin: 5px;" [routerLink]="['new']" mat-icon-button><mat-icon>add_circle_outline</mat-icon></button>
+</div>
 <div *ngIf="feedList">
-    <div *ngFor="let feed of feedList">
-        <h2>{{feed.name}}</h2>
-        
-        <p>{{feed.content}}</p>
-        <p>{{feed.location}}<p>
-        <a [routerLink]='["/Ark", feed.arkId]'>Edit Post</a>
-        <a [routerLink]='["/profile", feed.arkId]'>Profile</a>
-        <button (click)="onDelete(feed.arkId!)">Delete Post</button>
+    <div *ngFor="let feed of feedList" style="display: inline-block;">
+        <mat-card class="example-card">
+            <mat-card-header class="header">
+                <mat-card-title style="font-size: 35px;">{{feed.name}}</mat-card-title>
+                <mat-card-subtitle style="font-size: 20px; margin: 5px;">{{feed.location}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{feed.imgUrl}}" alt="Photo of a Shiba Inu">
+            <mat-card-content class="content">
+                <p>
+                    {{feed.content}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a [routerLink]='["/Ark", feed.arkId]' style="margin: 4px;">Edit Post</a>
+                <button (click)="onDelete(feed.arkId!)" style="margin: 4px;">Delete Post</button>
+
+            </mat-card-actions>
+        </mat-card>
     </div>
+
 </div>
